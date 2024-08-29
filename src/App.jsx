@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import "./App.css";
-import Welcome from "./components/User";
 import User from "./components/User";
 function App() {
   const [users, setUsers] = useState([]);
@@ -21,7 +20,7 @@ function App() {
 
   return (
     <main className="app">
-      <h1>My first React app</h1>
+      <h1>Users</h1>
       <section className="grid">
         {users.map((user) => (
           <User
