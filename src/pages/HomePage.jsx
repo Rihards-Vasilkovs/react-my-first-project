@@ -50,10 +50,11 @@ export default function HomePage() {
   );
 
   const titles = [...new Set(games.map((game) => game.title))]; //gets all the unique titles from the array of games
+  const languages = [...new Set(games.map((game) => game.language))];
   console.log(titles);
 
   if (filter != "") {
-    filteredGames = filteredGames.filter((game) => game.title === filter); //filter the games array
+    filteredGames = filteredGames.filter((game) => game.language === filter); //filter the games array
   }
 
   return (
@@ -71,9 +72,9 @@ export default function HomePage() {
           Filter by language{" "}
           <select onChange={(e) => setFilter(e.target.value)}>
             <option value="">select language</option>
-            {titles.map((title) => (
-              <option key={title} value={title}>
-                {title}
+            {languages.map((language) => (
+              <option key={language} value={language}>
+                {language}
               </option>
             ))}
           </select>
@@ -81,7 +82,8 @@ export default function HomePage() {
         <label>
           Sort by
           <select name="sort-by" onChange={(e) => setSort(e.target.value)}>
-            <option value="title">Genre</option>
+            <option value="title">title</option>
+            <option value="genre">genre</option>
           </select>
         </label>
       </form>
