@@ -1,24 +1,112 @@
 [
   {
-    "title": "sfds",
-    "genre": "sdfsdf",
-    "players": "sdfsdf",
-    "image": "https://www.dexerto.com/cdn-image/wp-content/uploads/2024/08/26/valve-deadlock.jpg?width=3840&quality=60&format=auto",
-    "language": "sdfdsf",
-    "location": "fsdfsdf",
-    "description": "sfsdfsd",
-    "playtime": "sdfsdffffffffffffffffffffffff",
-    "id": "1725459143706"
+    "title": "Catan",
+    "genre": "Strategy",
+    "players": "3-4",
+    "image": "https://cf.geekdo-images.com/W3Bsga_uLP9kO91gZ7H8yw__itemrep/img/IzYEUm_gWFuRFOL8gQYqGm5gU6A=/fit-in/246x300/filters:strip_icc()/pic2419375.jpg",
+    "language": "EN",
+    "location": "A1",
+    "description": "Collect and trade resources to build up the island of Catan in this modern classic. ",
+    "playtime": "60-120min",
+    "id": "1725460620905"
   },
   {
-    "title": "sadasd",
-    "genre": "asdsad",
-    "players": "asdsad",
-    "image": "https://www.dexerto.com/cdn-image/wp-content/uploads/2024/08/26/valve-deadlock.jpg?width=3840&quality=60&format=auto",
-    "language": "asdasd",
-    "location": "asdsad",
-    "description": "sadsad",
-    "playtime": "asdasd",
-    "id": "1725459644871"
+    "title": "Monopoly",
+    "genre": "Family",
+    "players": "2-8",
+    "image": "https://cf.geekdo-images.com/9nGoBZ0MRbi6rdH47sj2Qg__itemrep/img/8EP4ErNA709diOt6fUyJH30FtbU=/fit-in/246x300/filters:strip_icc()/pic5786795.jpg",
+    "language": "DK",
+    "location": "A2",
+    "description": "In this competitive real estate market, there's only one possible outcome: Monopoly! ",
+    "playtime": "60-180min",
+    "id": "1725460702622"
+  },
+  {
+    "title": "Risk",
+    "genre": "War",
+    "players": "2-6",
+    "image": "https://cf.geekdo-images.com/Oem1TTtSgxOghRFCoyWRPw__itemrep/img/9F-zB7QO9QubnP8-64HnA60AbB8=/fit-in/246x300/filters:strip_icc()/pic4916782.jpg",
+    "language": "EN",
+    "location": "A3",
+    "description": "Will you conquer the world in this multi-player push-your-luck wargame? ",
+    "playtime": "120min",
+    "id": "1725460802995"
+  },
+  {
+    "title": "Ticket to Ride",
+    "genre": "Family",
+    "players": "2-5",
+    "image": "https://cf.geekdo-images.com/ZWJg0dCdrWHxVnc0eFXK8w__itemrep/img/iiTIuTtuneM3tbDCjALecsgyizA=/fit-in/246x300/filters:strip_icc()/pic38668.jpg",
+    "language": "EN",
+    "location": "B1",
+    "description": "Build your railroad across North America to connect cities and complete tickets. ",
+    "playtime": "30-60min",
+    "id": "1725460928950"
+  },
+  {
+    "title": "Pandemic",
+    "genre": "Strategy",
+    "players": "2-4",
+    "image": "https://cf.geekdo-images.com/S3ybV1LAp-8SnHIXLLjVqA__itemrep/img/wAMLbgihOl7dJDHnvqt7OXKEV-4=/fit-in/246x300/filters:strip_icc()/pic1534148.jpg",
+    "language": "DK",
+    "location": "B2",
+    "description": "Your team of experts must prevent the world from succumbing to a viral pandemic. ",
+    "playtime": "45min",
+    "id": "1725461048639"
+  },
+  {
+    "title": "Carcassonne",
+    "genre": "Family",
+    "players": "2-5",
+    "image": "https://cf.geekdo-images.com/okM0dq_bEXnbyQTOvHfwRA__itemrep/img/_GLRhUoVx6Zp4kTE0rv_gi9cyOQ=/fit-in/246x300/filters:strip_icc()/pic6544250.png",
+    "language": "EN",
+    "location": "D1",
+    "description": "Shape the medieval landscape of France, claiming cities, monasteries and farms. ",
+    "playtime": "30-45min",
+    "id": "1725461097318"
+  },
+  {
+    "title": "Scrabble",
+    "genre": "Family",
+    "players": "2–4 ",
+    "image": "https://cf.geekdo-images.com/mVmmntn2oQd0PfFrWBvwIQ__itemrep/img/xtiNZzN_7T6xZ3EPxzgYcBz9Ydk=/fit-in/246x300/filters:strip_icc()/pic404651.jpg",
+    "language": "EN",
+    "location": "D2",
+    "description": "Carefully place your lettered tiles to make high-scoring words. ",
+    "playtime": "90min",
+    "id": "1725461152424"
+  },
+  {
+    "title": "Clue",
+    "genre": "Family",
+    "players": "2-6",
+    "image": "https://cf.geekdo-images.com/wNcbhLJGGjakYjjm1gV_kQ__itemrep/img/zxCbji0M3Ot9yTmNWlbKNF9fgQ4=/fit-in/246x300/filters:strip_icc()/pic7563466.png",
+    "language": "EN",
+    "location": "D2",
+    "description": "Catch the culprit of a crime by identifying who did it, with what, and where. ",
+    "playtime": "45min",
+    "id": "1725461227711"
+  },
+  {
+    "title": "Dominion",
+    "genre": "Family",
+    "players": "2-4",
+    "image": "https://cf.geekdo-images.com/j6iQpZ4XkemZP07HNCODBA__itemrep/img/_QiaiFj-LGZoqdatE-wVqNaYWx8=/fit-in/246x300/filters:strip_icc()/pic394356.jpg",
+    "language": "EN",
+    "location": "C3",
+    "description": "Acquire the most valuable lands by building your deck with treasure and power cards. ",
+    "playtime": "30min",
+    "id": "1725461326488"
+  },
+  {
+    "title": "Munchkin",
+    "genre": "Party",
+    "players": "3-6",
+    "image": "https://cf.geekdo-images.com/J-ts3MW0UhDzs621TR6cog__itemrep/img/2MRtjy32fdzTBDCvUk73dA-ZtJk=/fit-in/246x300/filters:strip_icc()/pic1871016.jpg",
+    "language": "EN",
+    "location": "B3",
+    "description": "Attack and loot in this humorous, card-based dungeon crawler. ",
+    "playtime": "60-120min",
+    "id": "1725461387729"
   }
 ]

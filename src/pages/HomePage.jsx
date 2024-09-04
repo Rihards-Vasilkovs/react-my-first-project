@@ -37,7 +37,7 @@ export default function HomePage() {
 
   async function fetchGames() {
     const response = await fetch(
-      "https://raw.githubusercontent.com/cederdorff/race/master/data/users.json"
+      "https://raw.githubusercontent.com/Rihards-Vasilkovs/react-my-first-project/main/src/assets/games.json"
     );
 
     const data = await response.json(); // parse the data from string to javascript array
