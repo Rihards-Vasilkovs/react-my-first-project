@@ -1,66 +1,365 @@
+/* ---------- Root Variables ---------- */
 :root {
+  --green: #b3231e;
+  --dark-green: rgb(9, 47, 59);
+  --light-green: rgb(250, 250, 250);
+  --light-grey: #f1f1f4;
+  --text-color-danger: rgb(152, 58, 58);
+  --text-color-dark: #333;
+  --text-color-light: #f1f1f1;
+  --text-color-danger: #f44250;
+  --white: #f1f1f1;
+}
+
+/* ---------- HTML, body and rest styling ---------- */
+
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body,
+html {
+  background-color: var(--light-green);
+  color: var(--text-color-dark);
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
   font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #e07f62;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
+  height: 100%;
+  line-height: 1.5;
   margin: 0;
-  min-width: 320px;
-  min-height: 100vh;
+  padding: 0;
 }
+
+/* ---------- Typography ---------- */
 
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
+h2 {
   font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  letter-spacing: 0.1px;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+h3 {
+  font-weight: 500;
+  letter-spacing: 0.1px;
+}
+
+/*a {
+  color: var(--green);
+  text-decoration: none;
+  transition: 0.5s;
+}
+
+a:hover {
+  color: var(--dark-green);
+} */
+
+/* ---------- Form, input and button Styling ---------- */
+
+textarea,
+input,
+button,
+select {
+  font-size: 1rem;
+  font-family: inherit;
+  border: none;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 0px 1px hsla(0, 0%, 0%, 0.2), 0 1px 2px hsla(0, 0%, 0%, 0.2);
+  background-color: white;
+  line-height: 1.5;
+  margin: 0;
+}
+button {
+  color: var(--white);
+  font-weight: 500;
+  cursor: pointer;
+  padding: 1em 2em;
+  background-color: var(--green);
+  transition: 0.5s;
+  width: 100%;
+}
+
+button:hover {
+  background-color: var(--light-green);
+  color: var(--green);
+}
+
+textarea:hover,
+input:hover,
+button:hover {
+  box-shadow: 0 0px 1px hsla(0, 0%, 0%, 0.6), 0 1px 2px hsla(0, 0%, 0%, 0.2);
+}
+
+button:active {
+  box-shadow: 0 0px 1px hsla(0, 0%, 0%, 0.4);
+  transform: translateY(1px);
+}
+
+form[action$="destroy"] button,
+.btn-cancel {
+  background-color: var(--white);
+  color: #f44250;
+}
+
+form[action$="destroy"] button:hover,
+.btn-cancel:hover {
+  background-color: #f44250;
+  color: var(--white);
+}
+
+form input {
+  width: 100%;
+}
+
+form .btns {
+  grid-column: 2;
+}
+
+form img {
+  max-width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 0px 1px hsla(0, 0%, 0%, 0.2), 0 1px 2px hsla(0, 0%, 0%, 0.2);
+}
+
+.btns {
+  display: flex;
+  gap: 0.5em;
+}
+
+/* ---------- Form Styling ---------- */
+
+form {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 1em;
+  align-items: center;
+  box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.25);
+  padding: 1.5em;
+  background-color: var(--white);
+  transition: 0.5s;
+  animation: fadeIn 0.5s;
+  border-radius: 8px;
+  margin: auto;
+}
+
+#sign-in-form,
+#sign-up-form {
+  width: 35rem;
+}
+
+/* ---------- Navigation Styling ---------- */
+nav {
+  background-color: var(--green);
+  display: grid;
+  left: 0;
+  position: fixed;
+  right: 0;
+  text-align: center;
+  top: 0;
+  padding: 1em 2em;
+  grid-template-columns: 1fr 1fr;
+  gap: 1em;
+}
+
+/* Style the links inside the navigation bar */
+nav a {
+  display: inline-block;
+  color: var(--text-color-light);
+  text-align: center;
+  padding: 20px 16px;
+  text-decoration: none;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border: 2px solid var(--green); /* Use the --green variable */
+  font-weight: 500;
+  font-size: 1.2em;
+  border-radius: 8px;
+  transition: 0.5s;
+}
+
+/* Change the color of links on hover */
+nav a:hover {
+  background-color: var(--light-green);
+  color: var(--green);
+}
+
+/* Add a color to the active/current link */
+nav a.active {
+  background-color: var(--light-green);
+  color: var(--green);
+}
+
+/* ---------- Page Styling ---------- */
+.page {
+  animation: fadeIn 0.5s;
+  padding: 140px 2em 2em;
+}
+
+/* ---------- Container Styling ---------- */
+.container {
+  max-width: 700px;
+  margin: auto;
+}
+
+/* ---------- Animations ---------- */
+/* fade in */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
   }
-  a:hover {
-    color: #747bff;
+
+  to {
+    opacity: 1;
   }
-  button {
-    background-color: #f9f9f9;
+}
+
+/* ---------- grid container styling ---------- */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1em;
+}
+
+@media (min-width: 600px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
   }
+}
+
+@media (min-width: 992px) {
+  .grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.grid > .game-card {
+  cursor: pointer;
+}
+
+/* ---------- Filter Grid styling ---------- */
+
+.grid-filter {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 1em;
+  padding: 1em;
+  background-color: var(--white);
+  box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.25);
+  border-radius: 8px;
+  margin: 0 0 1em;
+  align-items: center;
+}
+
+.grid-filter select {
+  width: 100%;
+  padding: 1.1rem;
+}
+
+.grid-filter input,
+.grid-filter select {
+  margin: 1em 0 0;
+}
+
+/* ---------- game Card styling ---------- */
+
+.game-card {
+  box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.25);
+  background-color: var(--white);
+  transition: 0.5s;
+  animation: fadeIn 0.5s;
+  cursor: pointer;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.gameInfo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.gameStats {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: green;
+}
+
+.game-card:hover {
+  box-shadow: 0 8px 16px 0 var(--green);
+}
+
+.game-card img {
+  width: 148px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.game-card h2 {
+  margin: 0.5em 0 0;
+}
+
+.game-card .title {
+  margin: 0;
+}
+
+/* ---------- avatar styling ---------- */
+
+.avatar {
+  display: flex;
+  align-items: center;
+  margin: 0 0 1.2em;
+  text-align: left;
+}
+
+.avatar span {
+  margin: 0 0 0 1em;
+}
+
+.avatar h3,
+.avatar p {
+  margin: 0;
+  line-height: 1.2;
+}
+
+.game-card .avatar img {
+  max-width: 50px;
+  max-height: 50px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+/* ---------- game Page styling ---------- */
+
+#game-page .game-card > img {
+  height: auto;
+}
+
+#game-page .btns {
+  padding: 1em 0;
+}
+
+/* ---------- Login Form Styling ---------- */
+#sign-in-page,
+#sign-up-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 85vh;
+}
+
+.error-message {
+  color: var(--text-color-danger);
+  margin-top: 10px;
+  grid-column: 2;
 }
