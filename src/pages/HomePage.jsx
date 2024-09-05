@@ -4,8 +4,8 @@ import Game from "../components/Game";
 export default function HomePage() {
   const [games, setGames] = useState([]); //state to handle the data of (games)
   const [searchTerm, setSearchTerm] = useState(""); // state to handle the search term
-  const [filter, setFilter] = useState(""); //state to handle filter
-  const [sort, setSort] = useState("name"); //state to handle the sorting
+  const [filterLanguage, setFilterLanguage] = useState(""); //state to handle filter
+  const [filterGenre, setFilterGenre] = useState(""); //state to handle the sorting
 
   useEffect(() => {
     getGames();
@@ -27,10 +27,6 @@ export default function HomePage() {
 
       console.log(gamesData);
 
-      filteredGames.sort((game1, game2) =>
-        game1[sort].localeCompare(game2[sort])
-      );
-
       setGames(gamesData); //set the games state with the data from local storage
     }
   }, []);
@@ -45,17 +41,15 @@ export default function HomePage() {
     return data; //return the data
   }
 
-  let filteredGames = games.filter((game) =>
-    game.title.toLowerCase().includes(searchTerm.toLowerCase())
-  );
+  let filteredGames = games
+    .filter((game) =>
+      game.title.toLowerCase().includes(searchTerm.toLowerCase())
+    )
+    .filter((game) => filterLanguage === "" || game.language === filterLanguage)
+    .filter((game) => filterGenre === "" || game.genre === filterGenre);
 
-  const titles = [...new Set(games.map((game) => game.title))]; //gets all the unique titles from the array of games
   const languages = [...new Set(games.map((game) => game.language))];
-  console.log(titles);
-
-  if (filter != "") {
-    filteredGames = filteredGames.filter((game) => game.language === filter); //filter the games array
-  }
+  const genres = [...new Set(games.map((game) => game.genre))];
 
   return (
     <section className="page">
@@ -70,7 +64,7 @@ export default function HomePage() {
         </label>
         <label>
           Filter by language{" "}
-          <select onChange={(e) => setFilter(e.target.value)}>
+          <select onChange={(e) => setFilterLanguage(e.target.value)}>
             <option value="">select language</option>
             {languages.map((language) => (
               <option key={language} value={language}>
@@ -80,10 +74,14 @@ export default function HomePage() {
           </select>
         </label>
         <label>
-          Sort by
-          <select name="sort-by" onChange={(e) => setSort(e.target.value)}>
-            <option value="title">title</option>
-            <option value="genre">genre</option>
+          Filter by language{" "}
+          <select onChange={(e) => setFilterGenre(e.target.value)}>
+            <option value="">select genre</option>
+            {genres.map((genre) => (
+              <option key={genre} value={genre}>
+                {genre}
+              </option>
+            ))}
           </select>
         </label>
       </form>

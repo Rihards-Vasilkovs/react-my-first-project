@@ -1,4 +1,6 @@
 import { useNavigate } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faUser, faClock } from "@fortawesome/free-solid-svg-icons";
 
 export default function Game({ game }) {
   const navigate = useNavigate();
@@ -27,8 +29,12 @@ export default function Game({ game }) {
       <div className="gameStats">
         <div>{game.genre}</div>
         <div>{game.language}</div>
-        <div>{game.playtime}</div>
-        <div>{game.players}</div>
+        <div>
+          <FontAwesomeIcon icon={faClock} /> {game.playtime}
+        </div>
+        <div>
+          <FontAwesomeIcon icon={faUser} /> {game.players}
+        </div>
         <div>{game.location}</div>
       </div>
     </article>

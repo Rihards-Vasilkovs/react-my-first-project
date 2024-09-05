@@ -167,6 +167,7 @@ nav {
   padding: 1em 2em;
   grid-template-columns: 1fr 1fr;
   gap: 1em;
+  z-index: 999;
 }
 
 /* Style the links inside the navigation bar */
@@ -279,18 +280,27 @@ nav a.active {
   border-radius: 10px;
   display: flex;
   flex-direction: column;
+  margin-top: 1.5rem;
 }
-.gameInfo {
+.gameInfo,
+.gameInfo a {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  padding: 1rem 1rem 1rem 1rem;
 }
 
 .gameStats {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  background-color: green;
+  position: relative;
+  margin-top: auto;
+  background-color: rgb(0, 128, 0);
+  color: #ffffff;
+  border-radius: 0px 0px 10px 10px;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 
 .game-card:hover {
@@ -302,6 +312,8 @@ nav a.active {
   height: 100px;
   object-fit: cover;
   border-radius: 10px;
+  margin-top: 0.5rem;
+  margin-right: 0.5rem;
 }
 
 .game-card h2 {
